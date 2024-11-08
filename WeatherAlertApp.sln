@@ -1,8 +1,34 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherAlertApp.DataAccess", "WeatherAlertApp.DataAccess\WeatherAlertApp.DataAccess.csproj", "{60411857-772F-4AF9-BC28-7C934B575CC7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherAlertApp.Common", "WeatherAlertApp.Common\WeatherAlertApp.Common.csproj", "{E207A69D-D854-46B2-BB7B-33C472D03F2C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherAlertApp.Presentation", "WeatherAlertApp.Presentation\WeatherAlertApp.Presentation.csproj", "{E0EE08B3-1630-44D3-8E1E-2149F83E9913}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WeatherAlertApp.Services", "WeatherAlertApp.Services\WeatherAlertApp.Services.csproj", "{C20A545A-E9D5-45AC-B560-F0682658543F}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{60411857-772F-4AF9-BC28-7C934B575CC7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{60411857-772F-4AF9-BC28-7C934B575CC7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{60411857-772F-4AF9-BC28-7C934B575CC7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{60411857-772F-4AF9-BC28-7C934B575CC7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E207A69D-D854-46B2-BB7B-33C472D03F2C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E207A69D-D854-46B2-BB7B-33C472D03F2C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E207A69D-D854-46B2-BB7B-33C472D03F2C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E207A69D-D854-46B2-BB7B-33C472D03F2C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E0EE08B3-1630-44D3-8E1E-2149F83E9913}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E0EE08B3-1630-44D3-8E1E-2149F83E9913}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E0EE08B3-1630-44D3-8E1E-2149F83E9913}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E0EE08B3-1630-44D3-8E1E-2149F83E9913}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C20A545A-E9D5-45AC-B560-F0682658543F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C20A545A-E9D5-45AC-B560-F0682658543F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C20A545A-E9D5-45AC-B560-F0682658543F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C20A545A-E9D5-45AC-B560-F0682658543F}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
