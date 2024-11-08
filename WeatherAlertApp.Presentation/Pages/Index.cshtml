@@ -1,0 +1,62 @@
+@page
+@model IndexModel
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weather Alert</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+<div class="container mt-5">
+    <h1>Weather Alert</h1>
+    
+    <!-- Форма для ввода города -->
+    <form method="post">
+        <div class="mb-3">
+            <label for="City" class="form-label">City</label>
+            <input type="text" id="City" name="City" class="form-control" value="@Model.City" required />
+        </div>
+        <button type="submit" class="btn btn-primary">Get Weather</button>
+    </form>
+
+    <!-- Проверка, введен ли город и есть ли данные о погоде -->
+    @if (!string.IsNullOrEmpty(Model.City) && Model.Weather != null)
+    {
+        <div class="mt-3">
+            <h2>Weather Forecast for @Model.Weather.City on @DateTime.Today.ToShortDateString()</h2>
+            <p><strong>High Temperature:</strong> @Model.Weather.MaxTemperature°F</p>
+            <p><strong>Low Temperature:</strong> @Model.Weather.MinTemperature°F</p>
+            <p><strong>Has Precipitation:</strong> @Model.Weather.HasPrecipitation</p>
+        </div>
+
+        @if (Model.IsFirstAlert)
+        {
+            <div class="alert alert-warning mt-3">
+                <strong>Warning!</strong> Rain is forecasted for today in @Model.Weather.City.
+            </div>
+        }
+    }
+    else
+    {
+        <!-- Если город не выбран или ошибка при получении данных -->
+        @if (string.IsNullOrEmpty(Model.City))
+        {
+            <div class="alert alert-info mt-3">
+                <strong>Welcome!</strong> Please enter a city to get the weather forecast.
+            </div>
+        }
+        else
+        {
+            <div class="alert alert-danger mt-3">
+                <strong>Error!</strong> Unable to fetch weather data for @Model.City. Please try again later.
+            </div>
+        }
+    }
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
